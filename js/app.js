@@ -100,10 +100,13 @@ function codeAddress(address) {
   });
 }
 
+
+
+
 google.maps.event.addDomListener(window, 'load', initialize);
 ko.applyBindings(new ViewModel());
 
-	// Show menu button
+/*	// Show menu button
 	$("#menuButton").attr('top',($(window).height() - $("#menuButton").height()));
 	$("#menuButton").attr('visibility','visible');
-	console.log($(window).height() - $("#menuButton").height());
+	console.log($(window).height() - $("#menuButton").height());*/
