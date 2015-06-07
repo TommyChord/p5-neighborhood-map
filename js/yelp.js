@@ -61,7 +61,7 @@ function testYelp(){
 	var json = (function() {
         var json = null;
         $.ajax({
-            'async': false,
+            //'async': false,
             'global': false,
             'url': "model/categories.json",
             'dataType': "json",
