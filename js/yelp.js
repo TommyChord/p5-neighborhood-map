@@ -72,9 +72,18 @@ function testYelp(){
         });
         return json;
     })();
-    
-    for(var i = 0; i < json.length; i ++){
-				$("#test").append(json[i].alias + '<br>');
+	
+	var catLen = json.length;
+    for(var i = 0; i < catLen; i ++){
+		if(json[i].hasOwnProperty('country_whitelist')){
+			for(var j= 0; json[i].country_whitelist.length; j ++){
+				if(json[i].country_whitelist[j] == 'NO'){
+					$("#test").append(json[i].title + '<br>');
+				}
 			}
+		} else {
+			$("#test").append(json[i].title + '<br>');
+		}
+	}
     
 }
