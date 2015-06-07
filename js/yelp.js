@@ -76,7 +76,7 @@ function testYelp(){
 	var catLen = json.length;
     for(var i = 0; i < catLen; i ++){
 		if(json[i].hasOwnProperty('country_whitelist')){
-			for(var j= 0; json[i].country_whitelist.length; j ++){
+			for(var j= 0; j < json[i].country_whitelist.length; j ++){
 				if(json[i].country_whitelist[j] == 'NO'){
 					$("#test").append(json[i].title + '<br>');
 				}
