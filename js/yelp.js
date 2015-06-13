@@ -1,6 +1,6 @@
 
 
-function testYelp(){
+function testYelp(pg){
 	// In a real world application I would never exposed the information below. I would
 	// rather implemented the call to the Yelp API from the server where the site is hosted
 	// instead of the client.
@@ -21,12 +21,17 @@ function testYelp(){
 	
 	var terms = 'food';
 	var near = 'Trondheim';
-	var category_filter = 'musicvenues';
+	var category_filter = 'shopping';
+	var sort = 1;
+	var radius_filter = '2000';
+	
+	var offset = (pg > '') ? pg * 20 + 20 : 20;
 	
 	parameters = [];
 	parameters.push(['category_filter', category_filter]);
 	parameters.push(['location', near]);
 	parameters.push(['cc', 'NO']);
+	parameters.push(['offset', offset]);
 	parameters.push(['callback', 'cb']);
 	parameters.push(['oauth_consumer_key', auth.consumerKey]);
 	parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
@@ -58,32 +63,37 @@ function testYelp(){
 			}
 		}
 	});
-	var json = (function() {
-        var json = null;
-        $.ajax({
-            //'async': false,
-            'global': false,
-            'url': "model/categories.json",
-            'dataType': "json",
-            'success': function (data) {
-                json = data;
-                console.log(json);
-            }
-        });
-        return json;
-    })();
-	
-	var catLen = json.length;
-    for(var i = 0; i < catLen; i ++){
-		if(json[i].hasOwnProperty('country_whitelist')){
-			for(var j= 0; j < json[i].country_whitelist.length; j ++){
-				if(json[i].country_whitelist[j] == 'NO'){
-					$("#test").append(json[i].title + '<br>');
+
+	$.getJSON( "/model/categories.json", function( data ) {
+	  var items = [];
+	  var catLen = data.length;
+	    for(var i = 0; i < catLen; i ++){
+		/*	if(data[i].hasOwnProperty('country_whitelist')){
+				for(var j= 0; j < data[i].country_whitelist.length; j ++){
+					if(data[i].country_whitelist[j] == 'NO'){
+						$("#test").append(data[i].title + '<br>');
+					}
+				}
+			} else {
+				$("#test").append(data[i].title + '<br>');
+			}*/
+			//$("#tmp").append(data[i].parents + '<br>');
+			if(data[i].parents == ''){
+				$("#test").append(data[i].title + '<br>');
+				for(var a = 0; a < catLen; a++){
+					if(data[a].parents == data[i].alias){
+						$("#test").append('&nbsp;- ' + data[a].title + '<br>');
+						for(var b = 0; b < catLen; b++){
+							if(data[b].parents == data[a].alias){
+								$("#test").append('&nbsp;&nbsp;-- ' + data[b].title + '<br>');
+							}
+						}
+					}
 				}
 			}
-		} else {
-			$("#test").append(json[i].title + '<br>');
 		}
-	}
+	});
+	
+	
     
 }

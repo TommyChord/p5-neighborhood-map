@@ -2,78 +2,177 @@
  * @author Tommy Walderhaug, June 2015
  */
 
+
 var model = {
 	sights: [
 		{
-		name	: "Nidarosdomen",
-		location: "Nidaros Domkirke, Bispegata 11, 7012 Trondheim",
-		url		: "http://www.nidarosdomen.no/en-GB/",
-		category: "churches"
+		name	: 'Nidarosdomen',
+		location: 'Nidaros Domkirke, Bispegata 11, 7012 Trondheim',
+		url		: 'http://www.nidarosdomen.no/en-GB/',
+		category: 'churches', 
+        coordinate: {
+			latitude : 63.427165, 
+			longitude : 10.396897
+			}
 		},{
 		name	: 'Norwegian University of Science and Technology',
 		location: 'Høgskoleringen 1, 7034 Trondheim',
 		url		: 'http://www.ntnu.edu/',
-		category: 'education'
+		category: 'education', 
+        coordinate: {
+			latitude : 63.419571, 
+			longitude : 10.401875
+			}
 		},{
 		name	: 'Rockheim',
 		location: 'Brattørkaia 14, 7010 Trondheim',
 		url		: 'http://www.rockheim.no/english/',
-		category: 'museums'
+		category: 'museums', 
+        coordinate: {
+			latitude : 63.438935, 
+			longitude : 10.401295
+			}
 		},{
 		name	: 'The Old City bridge',
 		location: 'Bubrua, 7013 Trondheim',
 		url		: 'http://www.trondheim.no/content/631863/The-Old-Town-Bridge?language=3',
-		category: 'landmarks'
+		category: 'landmarks', 
+        coordinate: {
+			latitude : 63.428206, 
+			longitude : 10.401714
+			}
 		},{
 		name	: 'Pirbadet',
 		location: 'Stiftelsen Trondheim Pirbad, Havnegata 12, 7010 Trondheim',
 		url		: 'http://www.pirbadet.com/',
-		category: 'bathing_area'
+		category: 'bathing_area', 
+        coordinate: {
+			latitude : 63.440245, 
+			longitude : 10.400673
+			}
 		},{
 		name	: 'Vår Frue kirke',
 		location: 'Vår Frue kirke, Kongens gate 5',
 		url		: 'http://www.kirkesok.no/eng/kirker/Vaar-Frue-kirke-Trondheim',
-		category: 'churches'
+		category: 'churches', 
+        coordinate: {
+			latitude : 63.430174, 
+			longitude : 10.397476
+			}
 		},{
 		name	: 'Trondheim United Methodist Church ',
 		location: 'Krambugata 6, 7406 Trondheim',
 		url		: 'http://www.metodistkirken.no/trondheim/frame.php?page=64',
-		category: 'churches'
+		category: 'churches', 
+        coordinate: {
+			latitude : 63.43242, 
+			longitude : 10.401274
+			}
 		},{
 		name	: 'St. Olav Catholic Parish',
 		location: 'Schirmers gate 1, 7012 Trondheim',
 		url		: 'http://trondheim.katolsk.no/en/home-page/',
-		category: 'churches'
+		category: 'churches', 
+        coordinate: {
+			latitude : 63.425528, 
+			longitude : 10.392551
+			}
 		},{
 		name	: 'Salem Menighet',
 		location: 'Prinsens Gate 22B, 7012 Trondheim',
 		url		: 'http://salemmenighet.no/',
-		category: 'churches'
+		category: 'churches', 
+        coordinate: {
+			latitude : 63.429804, 
+			longitude : 10.392219
+			}
 		},{
 		name	: 'Betel Pinsemenighet',
 		location: 'Prinsens Gate 10B, 7012 Trondheim',
 		url		: 'http://www.beteltrondheim.no/',
-		category:	'churches'
+		category:	'churches', 
+        coordinate: {
+			latitude : 63.428562, 
+			longitude : 10.392251
+			}
 		},{
 		name	: 'Trondheim Baptistmenighet',
 		location: 'Prinsens Gate 2D, 7012 Trondheim',
 		url		: '',
-		category:	'churches'
+		category:	'churches', 
+        coordinate: {
+			latitude : 63.425927, 
+			longitude : 10.392519
+			}
 		},{
 		name	: 'Ilen kirke',
 		location: 'Ilen kirke, 7012 Trondheim',
 		url		: 'http://www.kirkesok.no/eng/kirker/Ilen-kirke',
-		category:	'churches'
+		category:	'churches', 
+        coordinate: {
+			latitude : 63.429992, 
+			longitude : 10.376265
+			}
 		}
 	]
 };
 
 var Sight = function(data){
+	var self = this;
+	//var marker;
 	this.name = ko.observable(data.name);
-	this.location = ko.observable(data.location);	
+	this.location = ko.observable(data.location);
+	this.latitude  = ko.observable(data.coordinate.latitude);
+	this.longitude  = ko.observable(data.coordinate.longitude);
 	this.url = ko.observable(data.url);
 	this.category = ko.observable(data.category);
+	
+	marker = new google.maps.Marker({
+		map: map,
+		position: new google.maps.LatLng(this.latitude, this.longitude)//,
+		//animation: google.maps.Animation.DROP
+	});
+	
+	this.isVisible = ko.observable(false);
+
+	this.isVisible.subscribe(function(currentState) {
+		if (currentState) {
+			marker.setMap(map);
+		} else {
+			marker.setMap(null);
+		}
+	});
+
+	this.isVisible(true);
 };
+/*
+// Map marker filtering
+var Pin = function Pin(data) {
+	var marker;
+	var latLon = codeAddress(data.location);
+  this.name = ko.observable(data.name);
+  this.lat  = ko.observable(latLon.A);
+  this.lon  = ko.observable(latLon.B);
+  //this.text = ko.observable(text);
+
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(lat, lon),
+    animation: google.maps.Animation.DROP
+  });
+
+  this.isVisible = ko.observable(false);
+
+  this.isVisible.subscribe(function(currentState) {
+    if (currentState) {
+      marker.setMap(map);
+    } else {
+      marker.setMap(null);
+    }
+  });
+
+  this.isVisible(true);
+};
+*/
 
 var ViewModel = function(){
 	var self = this;
@@ -85,26 +184,29 @@ var ViewModel = function(){
 		self.displayItemList(!self.displayItemList());
     };
 	this.sightList = ko.observableArray([]);
+	model.sights.forEach(function(sightItem){
+		self.sightList.push(new Sight(sightItem));
+	});
 	
+	// -- Filtering
+	// Initially, show everything
 	this.typeToShow = ko.observable("all");
+	
+	// set category to show based on the click
 	self.filter = function (cat) {
         self.typeToShow(cat);
    	};
+   	// Do the atual filtering and return the filtered array
 	this.categoriesToShow = ko.pureComputed(function() {
-        // Represents a filtered list of planets
-        // i.e., only those matching the "typeToShow" condition
         var desiredType = this.typeToShow();
-        //console.log(desiredType);
+
         if (desiredType == "all") return this.sightList();
         return ko.utils.arrayFilter(this.sightList(), function(cat) {
             return ko.unwrap(cat.category) == desiredType;
         });
     }, this);
-    
-    
-	model.sights.forEach(function(sightItem){
-		self.sightList.push(new Sight(sightItem));
-	});
+
+	
 	
 	this.currentSight = ko.observable(this.sightList()[0]);
 
@@ -112,11 +214,17 @@ var ViewModel = function(){
 		codeAddress(sight.location());
 	};
 	
-	// Category filtering
-	
-	this.typeToShow = ko.observable("all");
-	
-	
+/*	self.filterPins = ko.computed(function () {
+    var search  = self.query().toLowerCase();
+
+    return ko.utils.arrayFilter(self.pins(), function (pin) {
+        var doesMatch = pin.name().toLowerCase().indexOf(search) >= 0;
+
+        pin.isVisible(doesMatch);
+
+        return doesMatch;
+    });
+});*/
 };
 
 ko.bindingHandlers.fadeVisible = {
@@ -133,11 +241,14 @@ ko.bindingHandlers.fadeVisible = {
 };
 
 
+
+
 var map;
-var geocoder;
+var geocoder = new google.maps.Geocoder();
 var marker;
+
 function initialize() {
-	geocoder = new google.maps.Geocoder();
+	
 	
 	var mapOptions = {
 	    zoom: 15,
@@ -152,32 +263,30 @@ function initialize() {
 	  };
 	
 	map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-	
-
+	ko.applyBindings(new ViewModel());
 }
 
 function codeAddress(address) {
-  //var address = model.sights[1].location;
-  geocoder.geocode( { 'address': address}, function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      	//map.setCenter(results[0].geometry.location);
-      	map.panTo(results[0].geometry.location);
-      	/*if(marker){
-      		marker.setMap(null);
-      	}*/
-		marker = new google.maps.Marker({
-			map: map,
-			position: results[0].geometry.location,
-			animation: google.maps.Animation.DROP
-		});
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+	geocoder.geocode( { 'address': address}, function(results, status) {
+		console.log("status: " + status);
+		//console.log(results);
+		if (status == google.maps.GeocoderStatus.OK) {
+			
+			var latitude = results[0].geometry.location.lat();
+			var longitude = results[0].geometry.location.lng();
+			console.log("latitude:" + latitude + " -- longitude: " + longitude);
+			return {
+				lat: latitude,
+				lon: longitude
+			};
+		} else {
+			console.log("Error");
+		}
+	});
 }
 
 
 
 
 google.maps.event.addDomListener(window, 'load', initialize);
-ko.applyBindings(new ViewModel());
+

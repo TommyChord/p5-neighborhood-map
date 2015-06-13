@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>Map Test</title>
+ 	<link type="text/css" href="css/app.css" rel="stylesheet"/>
+   <script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <style>
+    	#map1Div {
+    		width: 100%;
+    		height: 100%;
+    	}
+    </style>
+</head>
+<body>
+	<div id="map1Div" data-bind="map:mapOne"></div>
+	<input data-bind="value: mapOne().lat" />
+	<input data-bind="value: mapOne().lng" />
+	<script src="js/lib/knockout-3.3.0.js"></script>
+	<script src="js/map.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ body,
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 #map {
   display: block;
@@ -12,34 +13,101 @@ body,
   width: 100%;
 }
 
-#menuButton {
-	height: 30px;
-	width: 30px;
-	background-color: #e33c3c;
-	z-index: 10;
-	position: fixed;
+.listViewContainer {
+	width: 80%;
+	max-width: 300px;;
+	height: 60%;
+	max-height: 300px;
+	z-index: 5;
+	background: #fff;
+	opacity: 0.8;
 	position: absolute;
 	top: 10px;
 	left: 10px;
 	border-radius: 5px;
+	border: 1px solid rgba(50, 50, 50, 0.75);
+	padding: 5px;
+}
+.menu-column-left {
+	margin-top: 35px;
+	width: 40px;
+	height: 100%;
+	position: absolute;
+	float: left;
+}
+.menu-column-right {
+	width: calc(100% - 40px);
+	height: 100%;
+	float: right;
+}
+#listView {
+	padding: 5px;
+	font-size: 15px;
+	height: calc(100% - 40px);
+	/*background:#DDDD00;*/
+}
+.listItems {
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	/*background:#E8E5E3;*/
+}
+.places {
+	padding: 3px 0 3px 1px;
+}
+.places:nth-of-type(even){
+	background:#E8E5E3;
+	min-height: 16px;
+	width: 100%;
+}
+.places:hover{
+	border: 1px solid #333;
+	padding: 2px 0 2px 0;
+}
+.listTitle {
+	width: calc(100% - 10px);
+	height: 35px;
+	padding-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.listMenuIcons{
+	height: 100%;
+	margin-top: 10px;
+}
+.menuIcon {
+	width: 32px;
+	border: 1px outset #333;
+	border-radius: 3px;
 	-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.75);
-	/*visibility: hidden;*/
 }
-#listView {
-	max-width: 80%;
-	max-height: 40%;
-	z-index: 5;
-	background: #ffffff;
-	padding: 5px;
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	border-radius: 5px;
+.menuIcon:active {
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	border-style: inset;
 }
-
 #test {
+	width: 280px;
+	height: 400px;
+	overflow-y: auto;
+}
+#tmp {
+	width: 200px;
+	height: 400px;
+	background: #df0;
+	position: absolute;
+	top: 20px;
+	left: 400px;
+	border: 1px solid #333;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px 0px #333;
+	padding: 5px;
+	overflow-y: auto;
+}
+.spacer {
 	width: 280px;
 	height: 400px;
 	background: #dd0;
@@ -50,5 +118,42 @@ body,
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px 0px #333;
 	padding: 5px;
-	overflow-y: auto;
+	overflow: hidden;
+}
+
+.link {
+	cursor: pointer;
+}
+.menuButton { 
+	z-index: 10;
+	position: fixed;
+	position: absolute;
+    border: 1px outset #333;
+	top: 10px;
+	left: 10px;
+    border-radius: 5px; 
+    height: 36px; 
+    width:36px;
+    background: #e8e5e3;
+    opacity: 0.5;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.menuButton:active {
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	border-style: inset;
+}
+#lines:before { 
+    border-bottom: 17px double #333;
+    border-top: 6px solid #333;    
+    content:"";
+    height: 5px; 
+    position: absolute; 
+    right:3px;  
+    top: 4px; 
+    width:30px; 
 }
