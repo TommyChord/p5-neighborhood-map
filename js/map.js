@@ -300,6 +300,83 @@ var model = [
 		latitude : 63.43158, 
 		longitude : 10.395137
 		}
+	},{
+	name	: 'Scandic Nidelven',
+	location: 'Havnegata 1-3, 7010 Trondheim',
+	url		: 'http://www.scandichotels.no/Hotels/Norge/Trondheim/Nidelven/#.VX9TomMhVZk',
+	category: 'restaurants',
+	googleid: 'ChIJo2ax9Z4xbUYRNq_f7CrwsNs',
+	yelpid	: 'scandic-nidelven-trondheim',
+    coordinate: {
+		latitude : 63.435582, 
+		longitude : 10.406424
+		}
+	},{
+	name	: 'Sesam',
+	location: 'Elgesetergate 1, 7030 Trondheim',
+	url		: '',
+	category: 'restaurants',
+	googleid: 'ChIJBxOYQ5ExbUYRj650KHMXwts',
+	yelpid	: 'sesam-trondheim',
+    coordinate: {
+		latitude : 63.422543, 
+		longitude : 10.39488
+		}
+	},{
+	name	: 'Baklandet Skydsstation',
+	location: 'Øvre Bakklandet 33, 7013 Trondheim',
+	url		: 'http://www.skydsstation.no/',
+	category: 'restaurants',
+	googleid: 'ChIJqb152pkxbUYRPnGsWN9VfPQ',
+	yelpid	: 'baklandet-skydsstation-trondheim-2',
+    coordinate: {
+		latitude : 63.427412, 
+		longitude : 10.403334
+		}
+	},{
+	name	: 'Indian Tandoori Restaurant ',
+	location: 'Søndre gate 22A, 7010 Trondheim',
+	url		: 'http://tandooritrondheim.no/',
+	category: 'restaurants',
+	googleid: 'ChIJ180zDJwxbUYRNxnVDuOpVXY',
+	yelpid	: 'indian-tandoori-restaurant-trondheim',
+    coordinate: {
+		latitude : 63.433744, 
+		longitude : 10.400008
+		}
+	},{
+	name	: 'Bryggen Asian Cooking',
+	location: 'Øvre Bakklandet 66, 7013 Trondheim',
+	url		: 'http://www.bryggen.as/',
+	category: 'restaurants',
+	googleid: 'ChIJnSfpw5kxbUYRJ7nfmTLJvJ8',
+	yelpid	: 'bryggen-asian-cooking-trondheim-2',
+    coordinate: {
+		latitude : 63.427932, 
+		longitude : 10.402677
+		}
+	},{
+	name	: 'Kina Garden',
+	location: 'Gjelvangveita 2, 7010 Trondheim',
+	url		: 'http://www.bryggen.as/',
+	category: 'restaurants',
+	googleid: 'ChIJa6Xhc5wxbUYRPCUvCtx6Xmw',
+	yelpid	: 'kina-garden-trondheim',
+    coordinate: {
+		latitude : 63.433661, 
+		longitude : 10.39881
+		}
+	},{
+	name	: 'To Rom og Kjøkken',
+	location: 'Carl Johans gate 5, 7010 Trondheim',
+	url		: 'http://www.toromogkjokken.no/',
+	category: 'restaurants',
+	googleid: 'ChIJD_WLcZwxbUYRfOoISvT5WAc',
+	yelpid	: 'to-rom-og-kjøkken-trondheim',
+    coordinate: {
+		latitude : 63.433809, 
+		longitude : 10.398774
+		}
 	}
 ];
 
@@ -392,7 +469,9 @@ function MyViewModel() {
 		var showPin = false;
 		var hasMatch = false;
 		var bounds = new google.maps.LatLngBounds();
+		// No categrories are selected
 		if (desiredType == "all"){
+			// Nothing is entered in the search box
 			if(self.nameSearch().length == 0){
 				self.sightList().forEach(function(item){
 					item.marker().setVisible(true);
@@ -404,6 +483,7 @@ function MyViewModel() {
 
 				return this.sightList();
 			} else {
+				// Something is entered in the search box
 				return ko.utils.arrayFilter(this.sightList(), function(item) {
 					if(item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1){
 						item.marker().setVisible(true);
@@ -421,7 +501,9 @@ function MyViewModel() {
 				});
 			}
 		} else {
+			// A category is selected
 			return ko.utils.arrayFilter(this.sightList(), function(item) {
+				// Nothing is entered in the search box
 				if(self.nameSearch().length == 0){
 					if(ko.unwrap(item.category) == desiredType){
 						item.marker().setVisible(true);
@@ -436,6 +518,7 @@ function MyViewModel() {
 					}
 					return ko.unwrap(item.category) == desiredType;
 				} else {
+					// Something is entered in the search box
 					if(ko.unwrap(item.category) == desiredType && item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1){
 						item.marker().setVisible(true);
 						hasMatch = true;
@@ -453,7 +536,8 @@ function MyViewModel() {
 			});
 		}
 	}, this);
-
+	
+	// Build the sight list of Sights
 	model.forEach(function(sightItem){
 		self.sightList.push(new Sight(sightItem));
 	});

@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>P5: Neighborhood Map</title>
- 	<link type="text/css" href="css/app.css" rel="stylesheet"/>
+ 	<link type="text/css" href="css/app.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
-	<script type="text/javascript" src="js/lib/oauth.js" async></script>
-    <script type="text/javascript" src="js/lib/sha1.js" async></script>
+	<script type="text/javascript" src="js/lib/oauth.min.js" async></script>
+    <script type="text/javascript" src="js/lib/sha1.min.js" async></script>
 </head>
 <body>
 	<div id="map-canvas" data-bind="map:mapOne">
@@ -24,7 +24,7 @@
     			<img id="menu-btn-3" class="menuIcon link" src="img/education.png" alt="education" title="Education" data-bind="click: function() { filter('education', 3) }">
 	    		<img id="menu-btn-4" class="menuIcon link" src="img/museum.png" alt="museums" title="Museums" data-bind="click: function() { filter('museums', 4) }">
     			<img id="menu-btn-5" class="menuIcon link" src="img/landmark.png" alt="landmarks" title="Landmarks" data-bind="click: function() { filter('landmarks', 5) }">
-    			<img id="menu-btn-6" class="menuIcon link" src="img/food.png" alt="restaurant" title="Restaurant" data-bind="click: function() { filter('food', 6) }">
+    			<img id="menu-btn-6" class="menuIcon link" src="img/food.png" alt="restaurants" title="Restaurants" data-bind="click: function() { filter('restaurants', 6) }">
     		</div>	
    		</div>
    		<div class="menu-column-right">
@@ -42,7 +42,7 @@
     	</div>
     </div>
     <script src="js/lib/knockout-3.3.0.js"></script>
-	<script src="js/map.js"></script>
-    <script src="js/yelp.js" async></script>
+	<script src="js/map-min.js"></script>
+    <script src="js/yelp-min.js" async></script>
 </body>
 </html>
