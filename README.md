@@ -16,6 +16,7 @@ The page shows a full screen size map from Google Maps, showing the city of Tron
 ![Screenshot -- fullscreen](http://tommychord.github.io/p5-neighborhood-map/screenshots/fullscreen.png "Fullscreen")
 
 Up in the left corner there is a tiny menu icon that is used to hide or show the list of interesting places in the city.
+
 ![Screenshot -- list](http://tommychord.github.io/p5-neighborhood-map/screenshots/list.png "List")
 
 Clicking on the icons will  filter the list based on the selected category.
