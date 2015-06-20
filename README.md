@@ -38,7 +38,8 @@ The active category filter is shown by the red "glow".
 You can also do a free text search/filter by typing into the search box. If a category is selected, the text search will only show results from that category.
 If "ALL" is selected the text search will filter from the entire list. The map markers are also updated based on the desired filter(s).
 
-Clicking on a name in the list will make the marker start bouncing, and the marker will be centered in the map.
+Clicking on a name in the list will make the marker start bouncing, and the marker will be centered in the map. It will also display the info window for that place. Clicking the Title of the info window will take you to the selected place in Google Plus. Clicking on the Yelp icon, where available, will take you to the selected place at yelp.com.
+
 Clicking on a marker will bring up additional information about the place. This information is fetched from Google Places, and yelp.com.
 
 ![Screenshot -- details](http://tommychord.github.io/p5-neighborhood-map/screenshots/details.png "Details")
