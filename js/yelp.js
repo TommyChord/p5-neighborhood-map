@@ -1,9 +1,9 @@
-
+"use strict";
 function getYelpData(id, retData){
 	// In a real world application I would never exposed the information below. I would
 	// rather implemented the call to the Yelp API from the server where the site is hosted
 	// instead of the client.
-	
+
 	// Set up the API key
 	var auth = {
 		consumerKey : "aUS4s7TLob15R7qfqciZ4Q",
@@ -19,9 +19,9 @@ function getYelpData(id, retData){
 		consumerSecret : auth.consumerSecret,
 		tokenSecret : auth.accessTokenSecret
 	};
-	
+
 	// define the parameters
-	parameters = [];
+	var parameters = [];
 	parameters.push(['cc', 'NO']);
 	parameters.push(['callback', 'cb']);
 	parameters.push(['oauth_consumer_key', auth.consumerKey]);
@@ -45,22 +45,22 @@ function getYelpData(id, retData){
 		'cache' : true,
 		'dataType' : 'jsonp',
 		'jsonpCallback' : 'cb',
-		'success' : function(data, textStats, XMLHttpRequest) {
+		'success' : function(data) {
 			var yelpContent = '<hr><div class="row">';
-			if(data.url){
+			if (data.url) {
 				yelpContent += '<a href="' + data.url + '" target="yelp"><img src="img/miniMapLogo.png" alt="yelp logo" title="Click to open yelp.com"></a></div>';
 			} else {
 				yelpContent += '<img src="img/miniMapLogo.png" alt="yelp logo"></div>';
 			}
-			if(data.rating_img_url_small){
+			if (data.rating_img_url_small) {
 				yelpContent +='<div class="row"><span class="label">Rating: </span><img src="' + data.rating_img_url_small + '" alt="Rating"></div>';
 			}
-			if(data.image_url){
+			if (data.image_url) {
 				yelpContent +='<div class="row"><span class="label">Photo: </span><img src="' + data.image_url + '" alt="Photo"></div>';
 			}
 			retData({status: 'success', content: yelpContent});
 		},
-		'error' : function(e){
+		'error' : function(){
 			var yelpContent = '<hr><div class="row"><img src="img/miniMapLogo.png" alt="yelp logo"><span class="data">Not able to connect to Yelp.com at the moment.</span></div>';
 			retData({status: 'error', content: yelpContent});
 		}

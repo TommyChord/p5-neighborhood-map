@@ -3,13 +3,14 @@ body,
 #map-canvas {
 	height: 100%;
 	width: 100%;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
 .listViewContainer {
 	width: 80%;
-	max-width: 300px;;
+	max-width: 300px;
 	height: 275px;
 	z-index: 5;
 	background: #fff;
@@ -21,6 +22,7 @@ body,
 	border: 1px solid rgba(50, 50, 50, 0.75);
 	padding: 5px;
 }
+
 .menu-column-left {
 	margin-top: 35px;
 	width: 40px;
@@ -28,33 +30,40 @@ body,
 	position: absolute;
 	float: left;
 }
+
 .menu-column-right {
 	width: calc(100% - 40px);
 	height: 100%;
 	float: right;
 }
+
 #listView {
 	padding: 5px;
 	font-size: 15px;
 	height: calc(100% - 65px);
 }
+
 .listItems {
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
+
 .places {
 	padding: 3px 0 3px 1px;
 }
+
 .places:nth-of-type(even){
 	background: #e8e5e3;
 	min-height: 16px;
 	width: 100%;
 }
+
 .places:hover{
 	border: 1px solid #333;
 	padding: 2px 0 2px 0;
 }
+
 .listTitle {
 	width: calc(100% - 10px);
 	height: 35px;
@@ -62,10 +71,12 @@ body,
 	font-size: 20px;
 	font-weight: bold;
 }
+
 .listMenuIcons{
 	height: 100%;
 	margin-top: 10px;
 }
+
 .menuIcon {
 	width: 32px;
 	border: 1px outset #333;
@@ -73,24 +84,27 @@ body,
 	-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
+
 .menuIcon:active {
 	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	border-style: inset;
 }
+
 .menuIconGlow {
 	-webkit-box-shadow: 0 0 10px red;
 	box-shadow: 0 0 10px red;
 }
-.menuButton { 
+
+.menuButton {
 	z-index: 10;
 	position: fixed;
 	position: absolute;
     border: 1px outset #333;
 	top: 10px;
 	left: 10px;
-    border-radius: 5px; 
-    height: 36px; 
+    border-radius: 5px;
+    height: 36px;
     width:36px;
     background: #e8e5e3;
     opacity: 0.5;
@@ -103,42 +117,49 @@ body,
 	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	border-style: inset;
 }
-#lines:before { 
+
+#lines:before {
     border-bottom: 17px double #333;
-    border-top: 6px solid #333;    
+    border-top: 6px solid #333;
     content:"";
-    height: 5px; 
-    position: absolute; 
-    right:3px;  
-    top: 4px; 
-    width:30px; 
+    height: 5px;
+    position: absolute;
+    right:3px;
+    top: 4px;
+    width:30px;
 }
+
 .link {
 	cursor: pointer;
 	color: #333;
 	text-decoration: none;
 	outline: 0;
 }
+
 .label {
 	width: 100px;
 	font-weight: bold;
 	display: inline-block;
 }
+
 .data-ol {
 	list-style: none;
 	margin: 0 0 5px 100px;
 	padding-left: 0;
 }
+
 .search {
 	padding-left: 15px;
 	width: calc(100% - 10px);
 }
+
 .search-label {
 	font-weight: bold;
 	font-size: 0.9em;
 	display: inline-block;
 	width: 60px;
 }
+
 .search-box {
 	width: calc(100% - 75px);
 }

@@ -1,3 +1,4 @@
+"use strict";
 $(document).ready(function () {
 	ko.applyBindings(viewModel);
 });
@@ -11,7 +12,7 @@ var model = [
 	googleid: 'ChIJGaAFhZAxbUYRxkoY_2IKIhY',
 	yelpid	: 'nidarosdomen-trondheim',
     coordinate: {
-		latitude : 63.427165, 
+		latitude : 63.427165,
 		longitude : 10.396897
 		}
 	},{
@@ -22,7 +23,7 @@ var model = [
 	googleid: 'ChIJf5PA2L8xbUYR5BBz-Uo49RA',
 	yelpid	: 'ntnu-trondheim',
     coordinate: {
-		latitude : 63.419571, 
+		latitude : 63.419571,
 		longitude : 10.401875
 		}
 	},{
@@ -31,9 +32,9 @@ var model = [
 	url		: 'http://www.rockheim.no/english/',
 	category: 'museums',
 	googleid: 'ChIJ_SQZi50xbUYR2we35aFCaSU',
-	yelpid	: 'rockheim-trondheim', 
+	yelpid	: 'rockheim-trondheim',
     coordinate: {
-		latitude : 63.438935, 
+		latitude : 63.438935,
 		longitude : 10.401295
 		}
 	},{
@@ -42,9 +43,9 @@ var model = [
 	url		: 'http://www.trondheim.no/content/631863/The-Old-Town-Bridge?language=3',
 	category: 'landmarks',
 	googleid: 'ChIJ-WYR7JkxbUYR_NxVgP6GCj0',
-	yelpid	: 'gamle-bybro-trondheim', 
+	yelpid	: 'gamle-bybro-trondheim',
     coordinate: {
-		latitude : 63.428206, 
+		latitude : 63.428206,
 		longitude : 10.401714
 		}
 	},{
@@ -53,9 +54,9 @@ var model = [
 	url		: 'http://www.kirkesok.no/eng/kirker/Vaar-Frue-kirke-Trondheim',
 	category: 'churches',
 	googleid: 'ChIJEV4js5sxbUYRiqtUthnruQI',
-	yelpid	: '', 
+	yelpid	: '',
     coordinate: {
-		latitude : 63.430174, 
+		latitude : 63.430174,
 		longitude : 10.397476
 		}
 	},{
@@ -66,7 +67,7 @@ var model = [
 	googleid: 'ChIJkYLe_JsxbUYR01OgR0YPJ1g',
 	yelpid	: 'metodistkirken-i-norge-trondheim',
     coordinate: {
-		latitude : 63.43242, 
+		latitude : 63.43242,
 		longitude : 10.401274
 		}
 	},{
@@ -77,7 +78,7 @@ var model = [
 	googleid: 'ChIJo2JNV5AxbUYRJXYv-Nf9tmk',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.425528, 
+		latitude : 63.425528,
 		longitude : 10.392551
 		}
 	},{
@@ -88,7 +89,7 @@ var model = [
 	googleid: 'ChIJdVZYwpoxbUYROLFU0BwyC-0',
 	yelpid	: 'salem-menighet-normisjon-trondheim-trondheim',
     coordinate: {
-		latitude : 63.429804, 
+		latitude : 63.429804,
 		longitude : 10.392219
 		}
 	},{
@@ -99,7 +100,7 @@ var model = [
 	googleid: 'ChIJ7aRzl5oxbUYR2gjvQFphqQw',
 	yelpid	: 'pinsemenigheten-betel-trondheim-trondheim',
     coordinate: {
-		latitude : 63.428562, 
+		latitude : 63.428562,
 		longitude : 10.392251
 		}
 	},{
@@ -110,7 +111,7 @@ var model = [
 	googleid: 'ChIJ31K3XpAxbUYRYA4EXhQ6Yqc',
 	yelpid	: 'trondheim-baptistmenighet-trondheim',
     coordinate: {
-		latitude : 63.425927, 
+		latitude : 63.425927,
 		longitude : 10.392519
 		}
 	},{
@@ -121,7 +122,7 @@ var model = [
 	googleid: 'ChIJbTKKPYYxbUYR2BU32ovQx8s',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.429992, 
+		latitude : 63.429992,
 		longitude : 10.376265
 		}
 	},{
@@ -132,7 +133,7 @@ var model = [
 	googleid: 'ChIJRQATZpoxbUYRAJLUokscE3M',
 	yelpid	: 'trondheim-katedralskole-trondheim',
     coordinate: {
-		latitude : 63.428691, 
+		latitude : 63.428691,
 		longitude : 10.395716
 		}
 	},{
@@ -143,7 +144,7 @@ var model = [
 	googleid: 'ChIJbQBLt5oxbUYRYxPfSlrS6aM',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.429003, 
+		latitude : 63.429003,
 		longitude : 10.390888
 		}
 	},{
@@ -154,7 +155,7 @@ var model = [
 	googleid: 'ChIJQWdQ1ZsxbUYReHxtZZTBncE',
 	yelpid	: 'vitensenteret-trondheim',
     coordinate: {
-		latitude : 63.43016, 
+		latitude : 63.43016,
 		longitude : 10.400834
 		}
 	},{
@@ -165,7 +166,7 @@ var model = [
 	googleid: 'ChIJLTKoBZAxbUYR1a0_LVGMBOM',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.427175, 
+		latitude : 63.427175,
 		longitude : 10.390663
 		}
 	},{
@@ -176,7 +177,7 @@ var model = [
 	googleid: 'ChIJhdZiQqIxbUYRAVSYeTd5QHU',
 	yelpid	: 'stiftelsen-trondheim-international-school-trondheim',
     coordinate: {
-		latitude : 63.429344, 
+		latitude : 63.429344,
 		longitude : 10.413644
 		}
 	},{
@@ -187,7 +188,7 @@ var model = [
 	googleid: 'ChIJFSvJ7ZsxbUYRe7vJH6zNDdw',
 	yelpid	: 'folkeuniversitetet-midt-norge-trondheim',
     coordinate: {
-		latitude : 63.431993, 
+		latitude : 63.431993,
 		longitude : 10.399107
 		}
 	},{
@@ -198,7 +199,7 @@ var model = [
 	googleid: 'ChIJ-XPksJ4xbUYRD8V8USEX73Y',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.433869, 
+		latitude : 63.433869,
 		longitude : 10.404106
 		}
 	},{
@@ -209,7 +210,7 @@ var model = [
 	googleid: 'ChIJExGbthwxbUYRYY6srQ-FrY8',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.447162, 
+		latitude : 63.447162,
 		longitude : 10.453395
 		}
 	},{
@@ -220,7 +221,7 @@ var model = [
 	googleid: 'ChIJo7QnxRgybUYRwIfYyYCMMys',
 	yelpid	: 'sverresborg-trøndelag-folkemuseum-trondheim',
     coordinate: {
-		latitude : 63.421347, 
+		latitude : 63.421347,
 		longitude : 10.356814
 		}
 	},{
@@ -231,7 +232,7 @@ var model = [
 	googleid: 'ChIJR1lrRIUxbUYRFeJlMvS3n9A',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.429113, 
+		latitude : 63.429113,
 		longitude : 10.387434
 		}
 	},{
@@ -242,7 +243,7 @@ var model = [
 	googleid: 'ChIJKRtLapoxbUYRl9eKvDq9t2Q',
 	yelpid	: 'nordenfjeldske-kunstindustri-museum-trondheim',
     coordinate: {
-		latitude : 63.428701, 
+		latitude : 63.428701,
 		longitude : 10.396435
 		}
 	},{
@@ -253,7 +254,7 @@ var model = [
 	googleid: 'ChIJaVGFgZAxbUYRmLY0McnGb0k',
 	yelpid	: 'trondheim-kunstmuseum-trondheim',
     coordinate: {
-		latitude : 63.427482, 
+		latitude : 63.427482,
 		longitude : 10.394536
 		}
 	},{
@@ -264,7 +265,7 @@ var model = [
 	googleid: 'ChIJge7KZ5AxbUYRpt9V6VoT6dU',
 	yelpid	: 'det-jødiske-museum-trondheim-trondheim',
     coordinate: {
-		latitude : 63.426416, 
+		latitude : 63.426416,
 		longitude : 10.392948
 		}
 	},{
@@ -275,7 +276,7 @@ var model = [
 	googleid: 'ChIJUw2_DIYxbUYRWoLTYXpDXaQ',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.430193, 
+		latitude : 63.430193,
 		longitude : 10.378357
 		}
 	},{
@@ -286,7 +287,7 @@ var model = [
 	googleid: 'ChIJRei0vpAxbUYRC3DvDFLTy8Y',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.426109, 
+		latitude : 63.426109,
 		longitude : 10.395652
 		}
 	},{
@@ -297,7 +298,7 @@ var model = [
 	googleid: 'ChIJXfOSDpsxbUYRN_VSe55u3qU',
 	yelpid	: '',
     coordinate: {
-		latitude : 63.43158, 
+		latitude : 63.43158,
 		longitude : 10.395137
 		}
 	},{
@@ -308,7 +309,7 @@ var model = [
 	googleid: 'ChIJo2ax9Z4xbUYRNq_f7CrwsNs',
 	yelpid	: 'scandic-nidelven-trondheim',
     coordinate: {
-		latitude : 63.435582, 
+		latitude : 63.435582,
 		longitude : 10.406424
 		}
 	},{
@@ -319,7 +320,7 @@ var model = [
 	googleid: 'ChIJBxOYQ5ExbUYRj650KHMXwts',
 	yelpid	: 'sesam-trondheim',
     coordinate: {
-		latitude : 63.422543, 
+		latitude : 63.422543,
 		longitude : 10.39488
 		}
 	},{
@@ -330,7 +331,7 @@ var model = [
 	googleid: 'ChIJqb152pkxbUYRPnGsWN9VfPQ',
 	yelpid	: 'baklandet-skydsstation-trondheim-2',
     coordinate: {
-		latitude : 63.427412, 
+		latitude : 63.427412,
 		longitude : 10.403334
 		}
 	},{
@@ -341,7 +342,7 @@ var model = [
 	googleid: 'ChIJ180zDJwxbUYRNxnVDuOpVXY',
 	yelpid	: 'indian-tandoori-restaurant-trondheim',
     coordinate: {
-		latitude : 63.433744, 
+		latitude : 63.433744,
 		longitude : 10.400008
 		}
 	},{
@@ -352,7 +353,7 @@ var model = [
 	googleid: 'ChIJnSfpw5kxbUYRJ7nfmTLJvJ8',
 	yelpid	: 'bryggen-asian-cooking-trondheim-2',
     coordinate: {
-		latitude : 63.427932, 
+		latitude : 63.427932,
 		longitude : 10.402677
 		}
 	},{
@@ -363,7 +364,7 @@ var model = [
 	googleid: 'ChIJa6Xhc5wxbUYRPCUvCtx6Xmw',
 	yelpid	: 'kina-garden-trondheim',
     coordinate: {
-		latitude : 63.433661, 
+		latitude : 63.433661,
 		longitude : 10.39881
 		}
 	},{
@@ -374,7 +375,7 @@ var model = [
 	googleid: 'ChIJD_WLcZwxbUYRfOoISvT5WAc',
 	yelpid	: 'to-rom-og-kjøkken-trondheim',
     coordinate: {
-		latitude : 63.433809, 
+		latitude : 63.433809,
 		longitude : 10.398774
 		}
 	}
@@ -382,7 +383,7 @@ var model = [
 
 var Sight = function(data){
 	this.name = ko.observable(data.name);
-	this.location = ko.observable(data.location);	
+	this.location = ko.observable(data.location);
 	this.url = ko.observable(data.url);
 	this.category = ko.observable(data.category);
 	this.googleid = ko.observable(data.googleid);
@@ -400,17 +401,17 @@ function MyViewModel() {
 	});
 
 	self.nameSearch = ko.observable('');
-	this.displayItemList = ko.observable(false);
+	self.displayItemList = ko.observable(false);
 
 	self.toggleVisibility = function() {
 		self.displayItemList(!self.displayItemList());
 	};
-	this.sightList = ko.observableArray([]);
-	this.typeToShow = ko.observable("all");
+	self.sightList = ko.observableArray();
+	self.typeToShow = ko.observable("all");
 
 	// filter by category, show/hide proper markers and update map bounds
 	// triggered by icon click
-	this.filter = function (cat, btn) {
+	self.filter = function (cat, btn) {
 		// Visualize the active filter
 		$('.menuIcon').removeClass('menuIconGlow');
 		$('#menu-btn-' + btn).addClass('menuIconGlow');
@@ -418,15 +419,19 @@ function MyViewModel() {
 		self.typeToShow(cat);
 		var hasMatch = false;
 		var bounds = new google.maps.LatLngBounds();
+		
+		if ((typeof self.currentSight() !== "undefined") && (self.currentSight().category() != cat) && (cat !='all')) {
+			infowindow.close();
+		}
 		// loop through the observaleArray and set visibility & bounds
 		self.sightList().forEach(function(mark){
-			if(self.nameSearch().length == 0){
-				if(cat == 'all'){
+			if (self.nameSearch().length === 0) {
+				if (cat == 'all') {
 					hasMatch = true;
 					mark.marker().setVisible(true);
 					bounds.extend(mark.marker().getPosition());
 				} else {
-					if(mark.marker().category == cat){
+					if (mark.marker().category == cat) {
 						hasMatch = true;
 						mark.marker().setVisible(true);
 						bounds.extend(mark.marker().getPosition());
@@ -435,8 +440,8 @@ function MyViewModel() {
 					}
 				}
 			} else {
-				if(cat == 'all'){
-					if(mark.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1){
+				if (cat == 'all') {
+					if (mark.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1) {
 						hasMatch = true;
 						mark.marker().setVisible(true);
 						bounds.extend(mark.marker().getPosition());
@@ -444,7 +449,7 @@ function MyViewModel() {
 						mark.marker().setVisible(false);
 					}
 				} else {
-					if((mark.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1) && (mark.marker().category == cat)){
+					if ((mark.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1) && (mark.marker().category == cat)) {
 						hasMatch = true;
 						mark.marker().setVisible(true);
 						bounds.extend(mark.marker().getPosition());
@@ -455,24 +460,25 @@ function MyViewModel() {
 			}
 		});
 		// If the filters have a match use the new bounds
-		if(hasMatch){
+		if (hasMatch) {
 			self.mapOne().googleMap.fitBounds(bounds);
 			self.mapOne().googleMap.setCenter(bounds.getCenter());
-			if(self.mapOne().googleMap.getZoom() > 17){self.mapOne().googleMap.setZoom(17);}
+			if (self.mapOne().googleMap.getZoom() > 17) {
+				self.mapOne().googleMap.setZoom(17);
+			}
 		}
    	};
 
    	// update the list, markers and bounds based on category/search filter
-	this.categoriesToShow = ko.pureComputed(function() {
+   	self.categoriesToShow = ko.pureComputed(function() {
 		// Represents a filtered list of categories and test search
-		var desiredType = this.typeToShow();
-		var showPin = false;
+		var desiredType = self.typeToShow();
 		var hasMatch = false;
 		var bounds = new google.maps.LatLngBounds();
 		// No categrories are selected
-		if (desiredType == "all"){
+		if (desiredType == "all") {
 			// Nothing is entered in the search box
-			if(self.nameSearch().length == 0){
+			if (self.nameSearch().length === 0) {
 				self.sightList().forEach(function(item){
 					item.marker().setVisible(true);
 					hasMatch = true;
@@ -481,80 +487,97 @@ function MyViewModel() {
 				self.mapOne().googleMap.fitBounds(bounds);
 				self.mapOne().googleMap.setCenter(bounds.getCenter());
 
-				return this.sightList();
+				return self.sightList();
 			} else {
 				// Something is entered in the search box
-				return ko.utils.arrayFilter(this.sightList(), function(item) {
-					if(item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1){
+				// If there is no match with the current infowindow, close it
+				if ((typeof self.currentSight() !== "undefined") && (self.currentSight().name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) == -1)) {
+					infowindow.close();
+				}
+				// Now handle the markers
+				return ko.utils.arrayFilter(self.sightList(), function(item) {
+					if (item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1) {
 						item.marker().setVisible(true);
 						hasMatch = true;
 						bounds.extend(item.marker().getPosition());
 					} else {
 						item.marker().setVisible(false);
 					}
-					if(hasMatch){
+					if (hasMatch) {
 						self.mapOne().googleMap.fitBounds(bounds);
 						self.mapOne().googleMap.setCenter(bounds.getCenter());
-						if(self.mapOne().googleMap.getZoom() > 17){self.mapOne().googleMap.setZoom(17);}
+						if (self.mapOne().googleMap.getZoom() > 17) {
+							self.mapOne().googleMap.setZoom(17);
+						}
 					}
-					return item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1; 	
+					return item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1;
 				});
 			}
 		} else {
 			// A category is selected
-			return ko.utils.arrayFilter(this.sightList(), function(item) {
+			// If selected place is not in the selected category, close the infowindow.
+			if ((typeof self.currentSight() !== "undefined") && (self.currentSight().category() == desiredType && self.currentSight().name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) == -1)) {
+				infowindow.close();
+			}
+			return ko.utils.arrayFilter(self.sightList(), function(item) {
 				// Nothing is entered in the search box
-				if(self.nameSearch().length == 0){
-					if(ko.unwrap(item.category) == desiredType){
+				if (self.nameSearch().length === 0) {
+					if (ko.unwrap(item.category) == desiredType) {
 						item.marker().setVisible(true);
 						hasMatch = true;
 						bounds.extend(item.marker().getPosition());
 					} else {
 						item.marker().setVisible(false);
 					}
-					if(hasMatch){
+					if (hasMatch) {
 						self.mapOne().googleMap.fitBounds(bounds);
 						self.mapOne().googleMap.setCenter(bounds.getCenter());
 					}
 					return ko.unwrap(item.category) == desiredType;
 				} else {
 					// Something is entered in the search box
-					if(ko.unwrap(item.category) == desiredType && item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1){
+					if (ko.unwrap(item.category) == desiredType && item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1) {
 						item.marker().setVisible(true);
 						hasMatch = true;
 						bounds.extend(item.marker().getPosition());
 					} else {
 						item.marker().setVisible(false);
 					}
-					if(hasMatch){
+					if (hasMatch) {
 						self.mapOne().googleMap.fitBounds(bounds);
 						self.mapOne().googleMap.setCenter(bounds.getCenter());
-						if(self.mapOne().googleMap.getZoom() > 17){self.mapOne().googleMap.setZoom(17);}
+						if (self.mapOne().googleMap.getZoom() > 17) {
+							self.mapOne().googleMap.setZoom(17);
+						}
 					}
 					return ko.unwrap(item.category) == desiredType && item.name().toLowerCase().indexOf(self.nameSearch().toLowerCase()) !== -1;
 				}
 			});
 		}
 	}, this);
-	
+
 	// Build the sight list of Sights
 	model.forEach(function(sightItem){
 		self.sightList.push(new Sight(sightItem));
 	});
 
-	this.currentSight = ko.observable(this.sightList()[0]);
+	//this.currentSight = ko.observable(this.sightList()[0]);
+	self.currentSight = ko.observable();
 	// Set and center the current point of interest
 	// Set a timeout on the Bouncing...
-	this.setCurrentSight = function(sight) {
+	self.setCurrentSight = function(sight) {
+		self.currentSight(sight);
 		self.mapOne().googleMap.panTo(sight.marker().getPosition());
+		// Trigger the marker click event
+		google.maps.event.trigger(sight.marker(), "click");
 		sight.marker().setAnimation(google.maps.Animation.BOUNCE);
 		setTimeout(function() {
 			sight.marker().setAnimation(null);
 		}, 2800);
 	};
 
-	// Initially show all categories	
-	this.typeToShow = ko.observable("all");
+	// Initially show all categories
+	self.typeToShow = ko.observable("all");
 }
 
 ko.bindingHandlers.map = {
@@ -574,7 +597,7 @@ ko.bindingHandlers.map = {
 		};
 
 		mapObj.googleMap = new google.maps.Map(element, mapOptions);
-
+		//var infowindow = new google.maps.InfoWindow();
 		var bounds = new google.maps.LatLngBounds();
 
 		// Add markers to the model and set the boundaries
@@ -592,9 +615,9 @@ ko.bindingHandlers.map = {
 
 			// Add a click event to the marker
 			google.maps.event.addListener(mark.marker(), 'click', function() {
+				viewModel.currentSight(mark);
 				var request = {placeId: mark.googleid()};
 				var service = new google.maps.places.PlacesService(mapObj.googleMap);
-				var infowindow = new google.maps.InfoWindow();
 
 				//connect to Google Places and request details
 				service.getDetails(request, function(place, status) {
@@ -602,16 +625,16 @@ ko.bindingHandlers.map = {
 					var contentString = '';
 
 					if (status == google.maps.places.PlacesServiceStatus.OK) {
-						if(place.url){
+						if (place.url) {
 							contentString += '<h1><a href="' + place.url + '" title="Open in Google Plus" target="Plus" class="link">' + mark.name() + '</a></h1>';
 						} else {
 							contentString += '<h1>' + mark.name() + '</h1>';
 						}
 						contentString += '<div class="row"><span class="label">Address: </span><span class="data">'+ mark.location() + '</span></div>';
-						if(place.international_phone_number){
+						if (place.international_phone_number) {
 							contentString += '<div class="row"><span class="label">Phone: </span><span class="data">'+ place.international_phone_number + '</span></div>';
 						}
-						if(place.opening_hours){
+						if (place.opening_hours) {
 							var open = (place.opening_hours.open_now) ? 'Yes' : 'No';
 							contentString += '<div class="row"><span class="label">Open Now: </span><span class="data">'+ open + '</span></div>';
 							contentString += '<div class="row"><span class="label">Opening Hours: </span><ol class="data-ol">';
@@ -620,21 +643,21 @@ ko.bindingHandlers.map = {
 							});
 							contentString += '</ol></div>';
 						}
-						if(place.rating){
+						if (place.rating) {
 							contentString += '<div class="row"><span class="label">Rating: </span><span class="data">'+ place.rating + '</span></div>';
 						}
 					}
 
-					if(mark.url()){
-						contentString += '<div class="row"><span class="label">Website: </span><span class="data"><a href="'+ mark.url() + '" target="P5-Link">' + mark.url() + '</a></span></div>'
+					if (mark.url()) {
+						contentString += '<div class="row"><span class="label">Website: </span><span class="data"><a href="'+ mark.url() + '" target="P5-Link">' + mark.url() + '</a></span></div>';
 					}
 					// Fetch data from yelp.com if we have the ID
-					if(mark.yelpid()){
+					if (mark.yelpid()) {
 						getYelpData(mark.yelpid(), function(retData){
 							infowindow.setContent(infowindow.getContent() + retData.content);
 						});
 					}
-			    	
+
 					infowindow.setContent(contentString);
 					infowindow.open(mapObj.googleMap, mark.marker());
 				});
@@ -661,3 +684,4 @@ ko.bindingHandlers.fadeVisible = {
 };
 
 var viewModel = new MyViewModel();
+var infowindow = new google.maps.InfoWindow();
